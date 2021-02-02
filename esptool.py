@@ -182,11 +182,11 @@ def print_overwrite(message, last_line=False):
 
     If output is not a TTY (for example redirected a pipe), no overwriting happens and this function is the same as print().
     """
-    if sys.stdout.isatty():
-        print("\r%s" % message, end='\n' if last_line else '')
-    else:
-        print(message)
-
+    # if sys.stdout.isatty():
+    #     print("\r%s" % message, end='\n' if last_line else '')
+    # else:
+    #     print(message)
+    print(message)
 
 def _mask_to_shift(mask):
     """ Return the index of the least significant bit in the mask """

@@ -125,6 +125,8 @@ def main(custom_commandline=None):
     # each 'operation' is a module-level function of the same name
     operation_func(esp, efuses, args)
 
+    print('espefuse.py : DISCONNECT FROM PORT COM')
+    esp._port.close()
 
 def _main():
     try:
