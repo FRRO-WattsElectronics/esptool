@@ -18,7 +18,7 @@ from __future__ import division, print_function
 
 import argparse
 
-import espsecure
+import esptool.espsecure as espsecure
 
 import esptool
 

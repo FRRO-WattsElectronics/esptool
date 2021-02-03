@@ -37,7 +37,7 @@ from cryptography.utils import int_to_bytes
 
 import ecdsa
 
-import esptool
+import esptool.esptool as esptool
 
 try:
     _string_type = basestring

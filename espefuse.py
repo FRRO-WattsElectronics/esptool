@@ -22,12 +22,12 @@ import os
 import sys
 from io import StringIO
 
-import espressif.efuse.esp32 as esp32_efuse
-import espressif.efuse.esp32c3 as esp32c3_efuse
-import espressif.efuse.esp32s2 as esp32s2_efuse
-import espressif.efuse.esp32s3beta2 as esp32s3beta2_efuse
+import esptool.espressif.efuse.esp32 as esp32_efuse
+import esptool.espressif.efuse.esp32c3 as esp32c3_efuse
+import esptool.espressif.efuse.esp32s2 as esp32s2_efuse
+import esptool.espressif.efuse.esp32s3beta2 as esp32s3beta2_efuse
 
-import esptool
+import esptool.esptool as esptool
 
 
 def get_esp(port, baud, connect_mode, chip='auto', skip_connect=False, virt=False, debug=False, virt_efuse_file=None):

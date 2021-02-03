@@ -19,14 +19,14 @@ TEST_DIR = os.path.abspath(os.path.dirname(__file__))
 os.chdir(TEST_DIR)
 
 try:
-    import espsecure
+    from esptool.espsecure
 except ImportError:
     sys.path.insert(0, os.path.join(TEST_DIR, ".."))
-    import espsecure
+    from esptool.espsecure
 
 import esptool
 
-from test_esptool import ESPSECURE_PY
+from test_esptool from esptool.espsecure_PY
 
 
 class EspSecureTestCase(unittest.TestCase):
