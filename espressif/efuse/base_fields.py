@@ -296,7 +296,8 @@ class EfuseBlockBase(EfuseProtectBase):
                 print("Read all '0'")
             else:
                 # Should never be happened
-                raise esptool.FatalError("The {} is read-protected but not all '0' ({})".format(self.name, self.bitarray.hex))
+                # raise esptool.FatalError("The {} is read-protected but not all '0' ({})".format(self.name, self.bitarray.hex))
+                print('esptool.FatalError("The {} is read-protected but not all 0 ({})".format(self.name, self.bitarray.hex))')
         else:
             if self.wr_bitarray == self.bitarray:
                 print("BURN BLOCK%-2d - OK (write block == read block)" % self.id)
@@ -305,7 +306,8 @@ class EfuseBlockBase(EfuseProtectBase):
             else:
                 self.print_block(self.wr_bitarray, "Expected")
                 self.print_block(self.bitarray, "Real    ")
-                raise esptool.FatalError("Burn {} ({}) was not successful".format(self.name, self.alias))
+                # raise esptool.FatalError("Burn {} ({}) was not successful".format(self.name, self.alias))
+                print('esptool.FatalError("Burn {} ({}) was not successful".format(self.name, self.alias))')
         self.wr_bitarray.set(0)
 
 
@@ -402,7 +404,8 @@ class EspEfusesBase(object):
         if self.force_write_always:
             print(error_msg, "Skipped because '--force-write-always' option.")
         else:
-            raise esptool.FatalError(error_msg)
+            # raise esptoolimport.FatalError(error_msg)
+            print(error_msg, 'error msg')
 
 
 class EfuseFieldBase(EfuseProtectBase):
