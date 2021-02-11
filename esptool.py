@@ -3820,7 +3820,7 @@ def main(custom_commandline=None):
             # the ESP is now running the loaded image, so let it run
             print('Exiting immediately.')
         elif args.after == 'hard_reset':
-            print('AH ben non, plus de Hard reset right now')
+            print('NO HARD RESETTING !')
             # esp.hard_reset()
         elif args.after == 'soft_reset':
             print('Soft resetting...')

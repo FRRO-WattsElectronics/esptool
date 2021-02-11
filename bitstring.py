@@ -1436,7 +1436,8 @@ class Bits(object):
         if uint >= (1 << length):
             msg = "{0} is too large an unsigned integer for a bitstring of length {1}. "\
                   "The allowed range is [0, {2}]."
-            raise CreationError(msg, uint, length, (1 << length) - 1)
+            # raise CreationError(msg, uint, length, (1 << length) - 1)
+            print (msg)
         if uint < 0:
             raise CreationError("uint cannot be initialsed by a negative number.")
         s = hex(uint)[2:]

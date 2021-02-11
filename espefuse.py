@@ -29,7 +29,6 @@ import esptool.espressif.efuse.esp32s3beta2 as esp32s3beta2_efuse
 
 import esptool.esptool as esptool
 
-
 def get_esp(port, baud, connect_mode, chip='auto', skip_connect=False, virt=False, debug=False, virt_efuse_file=None):
     if chip not in ['auto', 'esp32', 'esp32s2', 'esp32s3beta2', 'esp32c3']:
         raise esptool.FatalError("get_esp: Unsupported chip (%s)" % chip)

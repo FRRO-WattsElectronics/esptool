@@ -242,7 +242,8 @@ def burn_efuse(esp, efuses, args):
                 print(burned_value, "->", new_value, "Efuse %s failed to burn. Protected?" % efuse.name)
                 raise_error = True
     if raise_error:
-        raise esptool.FatalError("The burn was not successful.")
+        # raise esptool.FatalError("The burn was not successful.")
+        print("The burn was not successful.")
     else:
         print("Successful")
 
