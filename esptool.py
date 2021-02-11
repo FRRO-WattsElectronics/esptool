@@ -3820,8 +3820,8 @@ def main(custom_commandline=None):
             # the ESP is now running the loaded image, so let it run
             print('Exiting immediately.')
         elif args.after == 'hard_reset':
-            print('Hard resetting via RTS pin...')
-            esp.hard_reset()
+            print('NO HARD RESETTING !')
+            # esp.hard_reset()
         elif args.after == 'soft_reset':
             print('Soft resetting...')
             # flash_finish will trigger a soft reset

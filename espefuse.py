@@ -127,11 +127,6 @@ def main(custom_commandline=None):
     print('espefuse.py : DISCONNECT FROM PORT COM')
     esp._port.close()
 
-def disconnect():
-    print('espefuse.py : DISCONNECT FROM PORT COM')
-    # esp = esptool.ESPLoader.detect_chip(port, baud, connect_mode)
-    # esp._port.close()
-
 def _main():
     try:
         main()
